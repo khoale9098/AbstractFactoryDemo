@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
 
 namespace AbstractFactory
+{ 
     class AudiFrame: Frame
     {
         public AudiFrame()

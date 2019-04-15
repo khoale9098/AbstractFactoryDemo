@@ -151,6 +151,6 @@ namespace AbstractFactory
             if (engineWorker.isRunning())
                 engineWorker.cancel();
         }
-    }
+    
     }
 }
