@@ -218,7 +218,19 @@ namespace AbstractFactory
                 worker.ReportProgress(i);
             }
         }
-        private void cmbAutoTypes_SelectedValueChanged(object sender, EventArgs e)
+
+
+        private void reportAssemblingProgress(object sender, ProgressChangedEventArgs e)
+        {
+            lblAssembling.Text = "Đang lắp ráp... " + e.ProgressPercentage + " %";
+            pgrAssembling.Value = e.ProgressPercentage;
+            if (e.ProgressPercentage >= 67)
+                picAssembling.Image = currCar.AssemblingBitmaps[2];
+            else if (e.ProgressPercentage >= 33)
+                picAssembling.Image = currCar.AssemblingBitmaps[1];
+        }
+
+        private void cmbCarTypes_SelectedValueChanged(object sender, EventArgs e)
         {
             currCar = (Car)cmbCarTypes.SelectedItem;
 
@@ -233,23 +245,12 @@ namespace AbstractFactory
             chkWheel.Checked = false;
             chkFrame.Checked = false;
             chkSeat.Checked = false;
-    
+
             chkEngine.Checked = false;
             pgrDoor.Value = 0;
             pgrWheel.Value = 0;
             pgrFrame.Value = 0;
             pgrSeat.Value = 0;
-          
-        }
-
-        private void reportAssemblingProgress(object sender, ProgressChangedEventArgs e)
-        {
-            lblAssembling.Text = "Đang lắp ráp... " + e.ProgressPercentage + " %";
-            pgrAssembling.Value = e.ProgressPercentage;
-            if (e.ProgressPercentage >= 67)
-                picAssembling.Image = currCar.AssemblingBitmaps[2];
-            else if (e.ProgressPercentage >= 33)
-                picAssembling.Image = currCar.AssemblingBitmaps[1];
         }
 
         private void finishAssembling(object sender, RunWorkerCompletedEventArgs e)
