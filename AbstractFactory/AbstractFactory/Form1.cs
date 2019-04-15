@@ -165,8 +165,7 @@ namespace AbstractFactory
         {
             if (checkAllEquipments())
             {
-                if (MessageBox.Show("Đã chế tạo xong. Bạn có muốn lắp ráp hay không?",
-                    "BÁO CÁO", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Đã chế tạo xong. Bạn có muốn lắp ráp hay không?","BÁO CÁO", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     frameCreate.Visible = false;
                     frameModel.Visible = false;
@@ -255,8 +254,8 @@ namespace AbstractFactory
 
         private void finishAssembling(object sender, RunWorkerCompletedEventArgs e)
         {
-            lblAssembling.Text = "Chế tạo xong xe " + currCar.ModelCarName;
-            picAssembling.Image = currCar.AssemblingBitmaps[3];
+            lblAssembling.Text = "Finish " + currCar.ModelCarName;
+            picAssembling.Image = currCar.AssemblingBitmaps[2];
             pgrAssembling.Value = 100;
         }
       
@@ -269,7 +268,7 @@ namespace AbstractFactory
             frameModel = new GroupBox();
             frameModel.Size = new Size(WIDTH_FRAME, HEIGHT_FRAME);
             frameModel.Location = new Point(2, 65);
-            frameModel.Text = "Mẫu xe";
+            //frameModel.Text = "Mẫu xe";
 
             //show model car name
             lblCarName = new Label();
@@ -297,36 +296,36 @@ namespace AbstractFactory
             chkDoor.Size = new Size(100, 30);
             chkDoor.Location = new Point(lblEquipments.Location.X, lblEquipments.Location.Y + lblEquipments.Height);
             chkDoor.TextAlign = ContentAlignment.MiddleLeft;
-            chkDoor.Text = "Cửa xe";
+            chkDoor.Text = "Door";
 
             chkWheel = new CheckBox();
             chkWheel.AutoSize = false;
             chkWheel.Size = new Size(100, 30);
             chkWheel.Location = new Point(lblEquipments.Location.X, chkDoor.Location.Y + chkDoor.Height);
             chkWheel.TextAlign = ContentAlignment.MiddleLeft;
-            chkWheel.Text = "Bánh xe";
+            chkWheel.Text = "Wheel";
 
             chkFrame = new CheckBox();
             chkFrame.AutoSize = false;
             chkFrame.Size = new Size(100, 30);
             chkFrame.Location = new Point(lblEquipments.Location.X, chkWheel.Location.Y + chkWheel.Height);
             chkFrame.TextAlign = ContentAlignment.MiddleLeft;
-            chkFrame.Text = "Khung xe";
+            chkFrame.Text = "Frame";
 
             chkSeat = new CheckBox();
             chkSeat.AutoSize = false;
             chkSeat.Size = new Size(100, 30);
             chkSeat.Location = new Point(lblEquipments.Location.X, chkFrame.Location.Y + chkFrame.Height);
             chkSeat.TextAlign = ContentAlignment.MiddleLeft;
-            chkSeat.Text = "Ghế";
+            chkSeat.Text = "Seat";
 
       
             chkEngine = new CheckBox();
             chkEngine.AutoSize = false;
             chkEngine.Size = new Size(100, 30);
-            //chkEngine.Location = new Point(lblEquipments.Location.X, chkControlSystem.Location.Y + chkControlSystem.Height);
+            chkEngine.Location = new Point(lblEquipments.Location.X, chkSeat.Location.Y + chkSeat.Height);
             chkEngine.TextAlign = ContentAlignment.MiddleLeft;
-            chkEngine.Text = "Động cơ";
+            chkEngine.Text = "Engine";
 
             frameModel.Controls.Add(lblCarName);
             frameModel.Controls.Add(picModelCar);

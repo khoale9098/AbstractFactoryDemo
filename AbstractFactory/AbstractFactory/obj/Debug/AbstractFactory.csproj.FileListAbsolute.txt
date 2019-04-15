@@ -23,3 +23,6 @@ D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\obj\Debug\AbstractFa
 D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\obj\Debug\AbstractFactory.csproj.CoreCompileInputs.cache
 D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\obj\Debug\AbstractFactory.exe
 D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\obj\Debug\AbstractFactory.pdb
+D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\obj\Debug\PopUps.Alert.resources
+D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\obj\Debug\AbstractFactory.csproj.CopyComplete
