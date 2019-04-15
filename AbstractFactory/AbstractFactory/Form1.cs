@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AbstractFactory
@@ -31,10 +27,238 @@ namespace AbstractFactory
             InitializeComponent();
             //initialize View
             initializeView();
-
             //initialize combobox auto types
             initializeCarTypes();
         }
+        private void BtnProduce_Click(object sender, EventArgs e)
+        {
+            frameModel.Visible = false;
+            frameCreate.Visible = true;
+            frameAssembling.Visible = false;
+
+            showSelectedEquipments();
+
+            //show all equipment models
+            showAllEquipmentModels();
+
+            //create all equipments
+            produceCar();
+        }
+        private void showAllEquipmentModels()
+        {
+            showModel(lblDoor, picDoor, pgrDoor, currCar.DoorBitmap, chkDoor.Checked);
+            showModel(lblWheel, picWheel, pgrWheel, currCar.WheelBitmap, chkWheel.Checked);
+            showModel(lblFrame, picFrame, pgrFrame, currCar.FrameBitmap, chkFrame.Checked);
+            showModel(lblSeat, picSeat, pgrSeat, currCar.SeatBitmap, chkSeat.Checked);
+            showModel(lblEngine, picEngine, pgrEngine, currCar.EngineBitmap, chkEngine.Checked);
+        }
+        private void showSelectedEquipments()
+        {
+            if (chkDoor.Checked)
+            {
+                lblPgrDoor.Text = "0 %";
+                pgrDoor.Visible = true;
+            }
+            else
+            {
+                lblPgrDoor.Text = "Không chế tạo";
+                pgrDoor.Visible = false;
+            }
+
+            if (chkWheel.Checked)
+            {
+                lblPgrWheel.Text = "0 %";
+                pgrWheel.Visible = true;
+            }
+            else
+            {
+                lblPgrWheel.Text = "Không chế tạo";
+                pgrWheel.Visible = false;
+            }
+
+            if (chkFrame.Checked)
+            {
+                lblPgrFrame.Text = "0 %";
+                pgrFrame.Visible = true;
+            }
+            else
+            {
+                lblPgrFrame.Text = "Không chế tạo";
+                pgrFrame.Visible = false;
+            }
+
+            if (chkSeat.Checked)
+            {
+                lblPgrSeat.Text = "0 %";
+                pgrSeat.Visible = true;
+            }
+            else
+            {
+                lblPgrSeat.Text = "Không chế tạo";
+                pgrSeat.Visible = false;
+            }
+
+           
+            if (chkEngine.Checked)
+            {
+                lblPgrEngine.Text = "0 %";
+                pgrEngine.Visible = true;
+            }
+            else
+            {
+                lblPgrEngine.Text = "Không chế tạo";
+                pgrEngine.Visible = false;
+            }
+        }
+        private void showModel(Label lbl, PictureBox picbox, ProgressBar pgress, Bitmap bitmap, bool isChecked)
+        {
+            picbox.Image = bitmap;
+
+            if (isChecked)
+            {
+                lbl.Visible = true;
+                pgress.Visible = true;
+            }
+            else
+            {
+                lbl.Visible = false;
+                pgress.Visible = false;
+            }
+        }
+        private void produceCar()
+        {
+            AbstractFactory factory;
+
+            if (currCar is Audi)
+            {
+                factory = new AudiFactory(pgrs, lbls, currCar);
+            }
+            else if (currCar is Lamboghini)
+            {
+                factory = new LamboghiniFactory(pgrs, lbls, currCar);
+            }
+            else
+                return;
+
+            factory.FinishProduction += new AbstractFactory.CompletingProduction(finishProduceCar);
+
+            Door door;
+            Wheel wheel;
+            Frame frame;
+            Seat seat;
+            Engine engine;
+
+            if (chkDoor.Checked)
+                door = factory.createDoor();
+
+            if (chkWheel.Checked)
+                wheel = factory.createWheel();
+
+            if (chkSeat.Checked)
+                seat = factory.createSeat();
+            if (chkFrame.Checked)
+                frame = factory.createFrame();
+            if (chkEngine.Checked)
+                engine = factory.createEngine();
+        }
+        private void finishProduceCar(object sender, EventArgs e)
+        {
+            if (checkAllEquipments())
+            {
+                if (MessageBox.Show("Đã chế tạo xong. Bạn có muốn lắp ráp hay không?",
+                    "BÁO CÁO", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    frameCreate.Visible = false;
+                    frameModel.Visible = false;
+                    frameAssembling.Visible = true;
+                    assemble();
+                }
+            }
+        }
+        private bool checkAllEquipments()
+        {
+            if (chkDoor.Checked && chkWheel.Checked && chkFrame.Checked && chkSeat.Checked && chkEngine.Checked)
+                return true;
+
+            return false;
+        }
+
+        private void assemble()
+        {
+            if (frameAssembling.Visible == true && currCar != null)
+            {
+                lblAssembling.Text = "Đang lắp ráp";
+                picAssembling.Image = currCar.AssemblingBitmaps[0];
+
+                BackgroundWorker assemblingWorker = new BackgroundWorker() { WorkerReportsProgress = true };
+                //assemblingWorker.DoWork += new DoWorkEventHandler(assembleCarEquipments);
+                assemblingWorker.DoWork += (sender, e)
+                    => assembleCarEquipments(sender, e);
+
+                assemblingWorker.ProgressChanged += (sender, e)
+                    => reportAssemblingProgress(sender, e);
+
+                assemblingWorker.RunWorkerCompleted += (sender, e)
+                    => finishAssembling(sender, e);
+
+                assemblingWorker.RunWorkerAsync();
+            }
+        }
+
+        private void assembleCarEquipments(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker worker = (BackgroundWorker)sender;
+
+            for (int i = 0; i < 100; i += 3)
+            {
+                //do something
+                System.Threading.Thread.Sleep(400);
+
+                //report progress percentage
+                worker.ReportProgress(i);
+            }
+        }
+        private void cmbAutoTypes_SelectedValueChanged(object sender, EventArgs e)
+        {
+            currCar = (Car)cmbCarTypes.SelectedItem;
+
+            frameModel.Visible = true;
+            frameCreate.Visible = false;
+            frameAssembling.Visible = false;
+
+            lblCarName.Text = currCar.ModelCarName;
+            picModelCar.Image = currCar.ModelCarBitmap;
+
+            chkDoor.Checked = false;
+            chkWheel.Checked = false;
+            chkFrame.Checked = false;
+            chkSeat.Checked = false;
+    
+            chkEngine.Checked = false;
+            pgrDoor.Value = 0;
+            pgrWheel.Value = 0;
+            pgrFrame.Value = 0;
+            pgrSeat.Value = 0;
+          
+        }
+
+        private void reportAssemblingProgress(object sender, ProgressChangedEventArgs e)
+        {
+            lblAssembling.Text = "Đang lắp ráp... " + e.ProgressPercentage + " %";
+            pgrAssembling.Value = e.ProgressPercentage;
+            if (e.ProgressPercentage >= 67)
+                picAssembling.Image = currCar.AssemblingBitmaps[2];
+            else if (e.ProgressPercentage >= 33)
+                picAssembling.Image = currCar.AssemblingBitmaps[1];
+        }
+
+        private void finishAssembling(object sender, RunWorkerCompletedEventArgs e)
+        {
+            lblAssembling.Text = "Chế tạo xong xe " + currCar.ModelCarName;
+            picAssembling.Image = currCar.AssemblingBitmaps[3];
+            pgrAssembling.Value = 100;
+        }
+      
         private void initializeView()
         {
             int WIDTH_FRAME = frameCreate.Width;
@@ -95,13 +319,7 @@ namespace AbstractFactory
             chkSeat.TextAlign = ContentAlignment.MiddleLeft;
             chkSeat.Text = "Ghế";
 
-            //chkControlSystem = new CheckBox();
-            //chkControlSystem.AutoSize = false;
-            //chkControlSystem.Size = new Size(100, 30);
-            //chkControlSystem.Location = new Point(lblEquipments.Location.X, chkSeat.Location.Y + chkSeat.Height);
-            //chkControlSystem.TextAlign = ContentAlignment.MiddleLeft;
-            //chkControlSystem.Text = "Hệ thống điều khiển";
-
+      
             chkEngine = new CheckBox();
             chkEngine.AutoSize = false;
             chkEngine.Size = new Size(100, 30);
@@ -116,7 +334,7 @@ namespace AbstractFactory
             frameModel.Controls.Add(chkWheel);
             frameModel.Controls.Add(chkFrame);
             frameModel.Controls.Add(chkSeat);
-            //frameModel.Controls.Add(chkControlSystem);
+
             frameModel.Controls.Add(chkEngine);
             Controls.Add(frameModel);
 
@@ -159,14 +377,14 @@ namespace AbstractFactory
             pgrs.Add(pgrWheel);
             pgrs.Add(pgrSeat);
             pgrs.Add(pgrFrame);
-            //pgrs.Add(pgrControlSystem);
+         
             pgrs.Add(pgrEngine);
 
             lbls.Add(lblPgrDoor);
             lbls.Add(lblPgrWheel);
             lbls.Add(lblPgrSeat);
             lbls.Add(lblPgrFrame);
-            //lbls.Add(lblPgrControlSystem);
+
             lbls.Add(lblPgrEngine);
         }
 

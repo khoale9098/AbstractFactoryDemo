@@ -301,6 +301,7 @@
             this.btnProduce.TabIndex = 8;
             this.btnProduce.Text = "Chế tạo";
             this.btnProduce.UseVisualStyleBackColor = true;
+            this.btnProduce.Click += new System.EventHandler(this.BtnProduce_Click);
             // 
             // Form1
             // 

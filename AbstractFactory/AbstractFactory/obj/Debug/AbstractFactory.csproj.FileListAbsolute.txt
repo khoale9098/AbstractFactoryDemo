@@ -13,3 +13,13 @@ D:\Github\AbstractFactoryDemo\AbstractFactory\AbstractFactory\bin\Debug\Abstract
 D:\Github\AbstractFactoryDemo\AbstractFactory\AbstractFactory\bin\Debug\AbstractFactory.pdb
 D:\Github\AbstractFactoryDemo\AbstractFactory\AbstractFactory\obj\Debug\AbstractFactory.exe
 D:\Github\AbstractFactoryDemo\AbstractFactory\AbstractFactory\obj\Debug\AbstractFactory.pdb
+D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\bin\Debug\AbstractFactory.exe.config
+D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\bin\Debug\AbstractFactory.exe
+D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\bin\Debug\AbstractFactory.pdb
+D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\obj\Debug\AbstractFactory.csprojAssemblyReference.cache
+D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\obj\Debug\AbstractFactory.Form1.resources
+D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\obj\Debug\AbstractFactory.Properties.Resources.resources
+D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\obj\Debug\AbstractFactory.csproj.GenerateResource.cache
+D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\obj\Debug\AbstractFactory.csproj.CoreCompileInputs.cache
+D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\obj\Debug\AbstractFactory.exe
+D:\OOAD\AbstractFactoryDemo\AbstractFactory\AbstractFactory\obj\Debug\AbstractFactory.pdb

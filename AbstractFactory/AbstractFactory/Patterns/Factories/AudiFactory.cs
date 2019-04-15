@@ -7,7 +7,7 @@ namespace AbstractFactory
     class AudiFactory:AbstractFactory
     {
         CreatingBackgroundWorker doorWorker, wheelWorker, seatWorker,
-               frameWorker, controlSystemWorker, engineWorker;
+               frameWorker, engineWorker;
 
         public AudiFactory(List<ProgressBar> pgrs, List<Label> lbls, Car car) : base(pgrs, lbls, car)
         {
@@ -124,7 +124,7 @@ namespace AbstractFactory
         public override bool isProducting()
         {
             if (doorWorker == null && wheelWorker == null && seatWorker == null && frameWorker == null
-                && controlSystemWorker == null && engineWorker == null)
+               && engineWorker == null)
                 return false;
 
             if (doorWorker.isRunning() || wheelWorker.isRunning() || seatWorker.isRunning() || frameWorker.isRunning() || engineWorker.isRunning())
