@@ -276,6 +276,8 @@ namespace AbstractFactory
             lblCarName.Size = new Size(200, 27);
             lblCarName.Location = new Point((WIDTH_FRAME - lblCarName.Width) / 2, 29);
             lblCarName.Text = "";
+            lblCarName.Font = new System.Drawing.Font("Stencil", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblCarName.ForeColor = System.Drawing.Color.DarkGreen;
             lblCarName.TextAlign = ContentAlignment.MiddleCenter;
 
             //show model car image

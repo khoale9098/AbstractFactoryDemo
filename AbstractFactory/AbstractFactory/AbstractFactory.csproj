@@ -149,9 +149,6 @@
     <None Include="Resources\AudiDoor.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\audi.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\assemble_audi1.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -195,6 +192,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Logo.png" />
+    <None Include="Resources\1.jpg" />
+    <Content Include="Resources\audi.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

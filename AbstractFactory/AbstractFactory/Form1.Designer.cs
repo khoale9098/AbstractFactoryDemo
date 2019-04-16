@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.frameCreate = new System.Windows.Forms.GroupBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lblPgrSeat = new System.Windows.Forms.Label();
             this.lblPgrEngine = new System.Windows.Forms.Label();
             this.lblPgrDoor = new System.Windows.Forms.Label();
@@ -36,35 +41,31 @@
             this.lblPgrWheel = new System.Windows.Forms.Label();
             this.lblDoor = new System.Windows.Forms.Label();
             this.lblEngine = new System.Windows.Forms.Label();
+            this.picDoor = new System.Windows.Forms.PictureBox();
+            this.picWheel = new System.Windows.Forms.PictureBox();
             this.lblSeat = new System.Windows.Forms.Label();
             this.pgrDoor = new System.Windows.Forms.ProgressBar();
+            this.picFrame = new System.Windows.Forms.PictureBox();
             this.pgrEngine = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFrame = new System.Windows.Forms.Label();
+            this.picSeat = new System.Windows.Forms.PictureBox();
             this.pgrSeat = new System.Windows.Forms.ProgressBar();
             this.pgrWheel = new System.Windows.Forms.ProgressBar();
             this.lblWheel = new System.Windows.Forms.Label();
             this.pgrFrame = new System.Windows.Forms.ProgressBar();
-            this.cmbCarTypes = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnProduce = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.picDoor = new System.Windows.Forms.PictureBox();
-            this.picWheel = new System.Windows.Forms.PictureBox();
-            this.picFrame = new System.Windows.Forms.PictureBox();
-            this.picSeat = new System.Windows.Forms.PictureBox();
             this.picEngine = new System.Windows.Forms.PictureBox();
+            this.LogoPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbCarTypes = new System.Windows.Forms.ComboBox();
+            this.btnProduce = new System.Windows.Forms.Button();
             this.frameCreate.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDoor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWheel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFrame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSeat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEngine)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // frameCreate
@@ -103,6 +104,51 @@
             this.frameCreate.Size = new System.Drawing.Size(1201, 645);
             this.frameCreate.TabIndex = 11;
             this.frameCreate.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackgroundImage = global::AbstractFactory.Properties.Resources.lift;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel6.Location = new System.Drawing.Point(828, 106);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(89, 82);
+            this.panel6.TabIndex = 16;
+            // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = global::AbstractFactory.Properties.Resources.pistons;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel5.Location = new System.Drawing.Point(828, 375);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(89, 82);
+            this.panel5.TabIndex = 15;
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = global::AbstractFactory.Properties.Resources.car_seat;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel4.Location = new System.Drawing.Point(285, 375);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(89, 82);
+            this.panel4.TabIndex = 14;
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::AbstractFactory.Properties.Resources.car;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel3.Location = new System.Drawing.Point(285, 106);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(89, 82);
+            this.panel3.TabIndex = 13;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::AbstractFactory.Properties.Resources.racing;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel2.Location = new System.Drawing.Point(560, 441);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(89, 82);
+            this.panel2.TabIndex = 12;
             // 
             // lblPgrSeat
             // 
@@ -171,6 +217,26 @@
             this.lblEngine.Text = "Engine";
             this.lblEngine.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // picDoor
+            // 
+            this.picDoor.Location = new System.Drawing.Point(56, 59);
+            this.picDoor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picDoor.Name = "picDoor";
+            this.picDoor.Size = new System.Drawing.Size(200, 160);
+            this.picDoor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDoor.TabIndex = 2;
+            this.picDoor.TabStop = false;
+            // 
+            // picWheel
+            // 
+            this.picWheel.Location = new System.Drawing.Point(510, 201);
+            this.picWheel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picWheel.Name = "picWheel";
+            this.picWheel.Size = new System.Drawing.Size(200, 160);
+            this.picWheel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picWheel.TabIndex = 2;
+            this.picWheel.TabStop = false;
+            // 
             // lblSeat
             // 
             this.lblSeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -190,6 +256,16 @@
             this.pgrDoor.Size = new System.Drawing.Size(200, 23);
             this.pgrDoor.Step = 1;
             this.pgrDoor.TabIndex = 4;
+            // 
+            // picFrame
+            // 
+            this.picFrame.Location = new System.Drawing.Point(945, 59);
+            this.picFrame.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picFrame.Name = "picFrame";
+            this.picFrame.Size = new System.Drawing.Size(200, 160);
+            this.picFrame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFrame.TabIndex = 2;
+            this.picFrame.TabStop = false;
             // 
             // pgrEngine
             // 
@@ -219,6 +295,16 @@
             this.lblFrame.TabIndex = 6;
             this.lblFrame.Text = "Frame";
             this.lblFrame.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // picSeat
+            // 
+            this.picSeat.Location = new System.Drawing.Point(56, 329);
+            this.picSeat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picSeat.Name = "picSeat";
+            this.picSeat.Size = new System.Drawing.Size(200, 160);
+            this.picSeat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSeat.TabIndex = 2;
+            this.picSeat.TabStop = false;
             // 
             // pgrSeat
             // 
@@ -259,125 +345,6 @@
             this.pgrFrame.Step = 1;
             this.pgrFrame.TabIndex = 4;
             // 
-            // cmbCarTypes
-            // 
-            this.cmbCarTypes.BackColor = System.Drawing.Color.White;
-            this.cmbCarTypes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCarTypes.FormattingEnabled = true;
-            this.cmbCarTypes.Location = new System.Drawing.Point(345, 28);
-            this.cmbCarTypes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbCarTypes.Name = "cmbCarTypes";
-            this.cmbCarTypes.Size = new System.Drawing.Size(468, 24);
-            this.cmbCarTypes.TabIndex = 9;
-            this.cmbCarTypes.SelectedValueChanged += new System.EventHandler(this.cmbCarTypes_SelectedValueChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.cmbCarTypes);
-            this.panel1.Controls.Add(this.btnProduce);
-            this.panel1.Location = new System.Drawing.Point(48, 7);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1109, 84);
-            this.panel1.TabIndex = 12;
-            // 
-            // btnProduce
-            // 
-            this.btnProduce.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnProduce.Image = global::AbstractFactory.Properties.Resources.caidat;
-            this.btnProduce.Location = new System.Drawing.Point(885, 10);
-            this.btnProduce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnProduce.Name = "btnProduce";
-            this.btnProduce.Size = new System.Drawing.Size(112, 55);
-            this.btnProduce.TabIndex = 8;
-            this.btnProduce.UseVisualStyleBackColor = false;
-            this.btnProduce.Click += new System.EventHandler(this.BtnProduce_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = global::AbstractFactory.Properties.Resources.lift;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel6.Location = new System.Drawing.Point(828, 106);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(89, 82);
-            this.panel6.TabIndex = 16;
-            // 
-            // panel5
-            // 
-            this.panel5.BackgroundImage = global::AbstractFactory.Properties.Resources.pistons;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel5.Location = new System.Drawing.Point(828, 375);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(89, 82);
-            this.panel5.TabIndex = 15;
-            // 
-            // panel4
-            // 
-            this.panel4.BackgroundImage = global::AbstractFactory.Properties.Resources.car_seat;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel4.Location = new System.Drawing.Point(285, 375);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(89, 82);
-            this.panel4.TabIndex = 14;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::AbstractFactory.Properties.Resources.car;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel3.Location = new System.Drawing.Point(285, 106);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(89, 82);
-            this.panel3.TabIndex = 13;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::AbstractFactory.Properties.Resources.racing;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel2.Location = new System.Drawing.Point(560, 441);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(89, 82);
-            this.panel2.TabIndex = 12;
-            // 
-            // picDoor
-            // 
-            this.picDoor.Location = new System.Drawing.Point(56, 59);
-            this.picDoor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picDoor.Name = "picDoor";
-            this.picDoor.Size = new System.Drawing.Size(200, 160);
-            this.picDoor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDoor.TabIndex = 2;
-            this.picDoor.TabStop = false;
-            // 
-            // picWheel
-            // 
-            this.picWheel.Location = new System.Drawing.Point(510, 201);
-            this.picWheel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picWheel.Name = "picWheel";
-            this.picWheel.Size = new System.Drawing.Size(200, 160);
-            this.picWheel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picWheel.TabIndex = 2;
-            this.picWheel.TabStop = false;
-            // 
-            // picFrame
-            // 
-            this.picFrame.Location = new System.Drawing.Point(945, 59);
-            this.picFrame.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picFrame.Name = "picFrame";
-            this.picFrame.Size = new System.Drawing.Size(200, 160);
-            this.picFrame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picFrame.TabIndex = 2;
-            this.picFrame.TabStop = false;
-            // 
-            // picSeat
-            // 
-            this.picSeat.Location = new System.Drawing.Point(56, 329);
-            this.picSeat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picSeat.Name = "picSeat";
-            this.picSeat.Size = new System.Drawing.Size(200, 160);
-            this.picSeat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSeat.TabIndex = 2;
-            this.picSeat.TabStop = false;
-            // 
             // picEngine
             // 
             this.picEngine.Location = new System.Drawing.Point(945, 329);
@@ -388,12 +355,57 @@
             this.picEngine.TabIndex = 2;
             this.picEngine.TabStop = false;
             // 
+            // LogoPanel
+            // 
+            this.LogoPanel.BackgroundImage = global::AbstractFactory.Properties.Resources.Logo;
+            this.LogoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LogoPanel.Location = new System.Drawing.Point(3, 10);
+            this.LogoPanel.Name = "LogoPanel";
+            this.LogoPanel.Size = new System.Drawing.Size(286, 96);
+            this.LogoPanel.TabIndex = 13;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::AbstractFactory.Properties.Resources._1;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.cmbCarTypes);
+            this.panel1.Controls.Add(this.btnProduce);
+            this.panel1.Location = new System.Drawing.Point(288, 7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(859, 84);
+            this.panel1.TabIndex = 12;
+            // 
+            // cmbCarTypes
+            // 
+            this.cmbCarTypes.BackColor = System.Drawing.Color.White;
+            this.cmbCarTypes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCarTypes.FormattingEnabled = true;
+            this.cmbCarTypes.Location = new System.Drawing.Point(153, 26);
+            this.cmbCarTypes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbCarTypes.Name = "cmbCarTypes";
+            this.cmbCarTypes.Size = new System.Drawing.Size(395, 24);
+            this.cmbCarTypes.TabIndex = 9;
+            this.cmbCarTypes.SelectedValueChanged += new System.EventHandler(this.cmbCarTypes_SelectedValueChanged);
+            // 
+            // btnProduce
+            // 
+            this.btnProduce.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnProduce.Image = global::AbstractFactory.Properties.Resources.caidat;
+            this.btnProduce.Location = new System.Drawing.Point(694, 10);
+            this.btnProduce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProduce.Name = "btnProduce";
+            this.btnProduce.Size = new System.Drawing.Size(112, 55);
+            this.btnProduce.TabIndex = 8;
+            this.btnProduce.UseVisualStyleBackColor = false;
+            this.btnProduce.Click += new System.EventHandler(this.BtnProduce_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1205, 750);
+            this.Controls.Add(this.LogoPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.frameCreate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -403,12 +415,12 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.frameCreate.ResumeLayout(false);
             this.frameCreate.PerformLayout();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picDoor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWheel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFrame)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSeat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEngine)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -444,6 +456,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.FlowLayoutPanel LogoPanel;
     }
 }
 
