@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-
+using PopUps;
 namespace AbstractFactory
 {
     public partial class Form1 : Form
@@ -29,6 +29,7 @@ namespace AbstractFactory
             initializeView();
             //initialize combobox auto types
             initializeCarTypes();
+           
         }
         private void BtnProduce_Click(object sender, EventArgs e)
         {
@@ -61,7 +62,7 @@ namespace AbstractFactory
             }
             else
             {
-                lblPgrDoor.Text = "Không chế tạo";
+                lblPgrDoor.Text = "No fabrication";
                 pgrDoor.Visible = false;
             }
 
@@ -72,7 +73,7 @@ namespace AbstractFactory
             }
             else
             {
-                lblPgrWheel.Text = "Không chế tạo";
+                lblPgrWheel.Text = "No fabrication";
                 pgrWheel.Visible = false;
             }
 
@@ -83,7 +84,7 @@ namespace AbstractFactory
             }
             else
             {
-                lblPgrFrame.Text = "Không chế tạo";
+                lblPgrFrame.Text = "No fabrication";
                 pgrFrame.Visible = false;
             }
 
@@ -94,11 +95,11 @@ namespace AbstractFactory
             }
             else
             {
-                lblPgrSeat.Text = "Không chế tạo";
+                lblPgrSeat.Text = "No fabrication";
                 pgrSeat.Visible = false;
             }
 
-           
+            
             if (chkEngine.Checked)
             {
                 lblPgrEngine.Text = "0 %";
@@ -106,7 +107,7 @@ namespace AbstractFactory
             }
             else
             {
-                lblPgrEngine.Text = "Không chế tạo";
+                lblPgrEngine.Text = "No fabrication";
                 pgrEngine.Visible = false;
             }
         }
@@ -163,9 +164,10 @@ namespace AbstractFactory
         }
         private void finishProduceCar(object sender, EventArgs e)
         {
+           
             if (checkAllEquipments())
             {
-                if (MessageBox.Show("Đã chế tạo xong. Bạn có muốn lắp ráp hay không?","BÁO CÁO", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Do you want to assemble?", "", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     frameCreate.Visible = false;
                     frameModel.Visible = false;
@@ -190,7 +192,6 @@ namespace AbstractFactory
                 picAssembling.Image = currCar.AssemblingBitmaps[0];
 
                 BackgroundWorker assemblingWorker = new BackgroundWorker() { WorkerReportsProgress = true };
-                //assemblingWorker.DoWork += new DoWorkEventHandler(assembleCarEquipments);
                 assemblingWorker.DoWork += (sender, e)
                     => assembleCarEquipments(sender, e);
 
@@ -252,11 +253,20 @@ namespace AbstractFactory
             pgrSeat.Value = 0;
         }
 
+        private void FrameCreate_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void finishAssembling(object sender, RunWorkerCompletedEventArgs e)
         {
-            lblAssembling.Text = "Finish " + currCar.ModelCarName;
+            lblAssembling.Text =  currCar.ModelCarName;
+            lblAssembling.Font = new System.Drawing.Font("Stencil", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblAssembling.ForeColor = System.Drawing.Color.DarkGreen;
+            Alert.Show("Finish!", AlertType.success);
             picAssembling.Image = currCar.AssemblingBitmaps[2];
             pgrAssembling.Value = 100;
+            
 
         }
       

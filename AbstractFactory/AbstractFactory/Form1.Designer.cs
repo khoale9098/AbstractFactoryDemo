@@ -104,6 +104,7 @@
             this.frameCreate.Size = new System.Drawing.Size(1201, 645);
             this.frameCreate.TabIndex = 11;
             this.frameCreate.TabStop = false;
+            this.frameCreate.Enter += new System.EventHandler(this.FrameCreate_Enter);
             // 
             // panel6
             // 
