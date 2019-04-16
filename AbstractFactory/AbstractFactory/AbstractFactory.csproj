@@ -34,9 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\LT Windows\Winform\PopUps\PopUps\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,12 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alert.designer.cs">
-      <DependentUpon>Alert.cs</DependentUpon>
-    </Compile>
     <Compile Include="CreatingBackgroundWorker.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -86,9 +77,6 @@
     <Compile Include="Patterns\Products\Concreate\Lamboghini\LamboWheel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Alert.resx">
-      <DependentUpon>Alert.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
