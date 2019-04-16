@@ -186,7 +186,7 @@ namespace AbstractFactory
         {
             if (frameAssembling.Visible == true && currCar != null)
             {
-                lblAssembling.Text = "Đang lắp ráp";
+                lblAssembling.Text = "Loading ";
                 picAssembling.Image = currCar.AssemblingBitmaps[0];
 
                 BackgroundWorker assemblingWorker = new BackgroundWorker() { WorkerReportsProgress = true };
@@ -221,7 +221,7 @@ namespace AbstractFactory
 
         private void reportAssemblingProgress(object sender, ProgressChangedEventArgs e)
         {
-            lblAssembling.Text = "Đang lắp ráp... " + e.ProgressPercentage + " %";
+            lblAssembling.Text = "Loading  " + e.ProgressPercentage + " %";
             pgrAssembling.Value = e.ProgressPercentage;
             if (e.ProgressPercentage >= 67)
                 picAssembling.Image = currCar.AssemblingBitmaps[2];
@@ -257,6 +257,7 @@ namespace AbstractFactory
             lblAssembling.Text = "Finish " + currCar.ModelCarName;
             picAssembling.Image = currCar.AssemblingBitmaps[2];
             pgrAssembling.Value = 100;
+
         }
       
         private void initializeView()
@@ -288,7 +289,7 @@ namespace AbstractFactory
             Label lblEquipments = new Label();
             lblEquipments.Size = new Size(WIDTH_FRAME - picModelCar.Location.X - picModelCar.Width - 60, 30);
             lblEquipments.Location = new Point(picModelCar.Location.X + picModelCar.Width + 60, picModelCar.Location.Y);
-            lblEquipments.Text = "Danh sách các bộ phận cần chế tạo";
+            //lblEquipments.Text = "Danh sách các bộ phận cần chế tạo";
             lblEquipments.TextAlign = ContentAlignment.MiddleCenter;
 
             chkDoor = new CheckBox();
@@ -296,6 +297,7 @@ namespace AbstractFactory
             chkDoor.Size = new Size(100, 30);
             chkDoor.Location = new Point(lblEquipments.Location.X, lblEquipments.Location.Y + lblEquipments.Height);
             chkDoor.TextAlign = ContentAlignment.MiddleLeft;
+            
             chkDoor.Text = "Door";
 
             chkWheel = new CheckBox();
@@ -342,7 +344,7 @@ namespace AbstractFactory
             frameAssembling = new GroupBox();
             frameAssembling.Size = new Size(WIDTH_FRAME, HEIGHT_FRAME);
             frameAssembling.Location = new Point(2, 65);
-            frameAssembling.Text = "Lắp ráp";
+       
 
             //show assembling progress
             lblAssembling = new Label();

@@ -124,14 +124,14 @@
   <data name="Lambowheel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lambowheel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="car" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\car.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="assemble_lamboghini1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\assemble_lamboghini1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="audi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\audi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LamboFrame" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LamboFrame.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AudiDoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AudiDoor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,8 +139,17 @@
   <data name="AudiWheel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AudiWheel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AudiSeat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AudiSeat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LamboEngine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LamboEngine.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gears" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gears.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pistons" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pistons.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lamborghini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lamborghini.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,17 +157,29 @@
   <data name="assemble_audi3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\assemble_audi3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AudiSeat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AudiSeat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="caidat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\caidat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car-seat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\car-seat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AudiFrame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AudiFrame.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="assemble_lamboghini3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\assemble_lamboghini3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LamboFrame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LamboFrame.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LamboSeat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LamboSeat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="assemble_lamboghini3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\assemble_lamboghini3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="racing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\racing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="screwdriver-and-wrench-crossed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\screwdriver-and-wrench-crossed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AudiEngine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AudiEngine.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,7 +196,7 @@
   <data name="tools" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tools.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="screwdriver-and-wrench-crossed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\screwdriver-and-wrench-crossed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lift" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lift.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -175,5 +175,26 @@
   <ItemGroup>
     <None Include="Resources\screwdriver-and-wrench-crossed.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caidat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gears.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car-seat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pistons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\racing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lift.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
